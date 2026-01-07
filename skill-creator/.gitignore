@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+node_modules/
+workspace/
+dist/
+*.skill
+__MACOSX/
+.DS_Store

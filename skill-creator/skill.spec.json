@@ -1,0 +1,57 @@
+{
+  "name": "skill-creator",
+  "title": "Skill Creator",
+  "description": "Create, scaffold, validate, and package Claude Code skills and SKILL.md/spec files. Use when building skill folders, tuning triggers, or packaging .skill files. Not for app features or incidents.",
+  "archetype": "basic",
+  "risk_level": "low",
+  "entry_point": "scripts/forge.py",
+  "goals": [
+    "Provide a repeatable workflow for authoring Skills with clear triggers and validation",
+    "Ensure skills are packaged as .skill files after validation and security checks",
+    "Promote composable, token-efficient skills with explicit inputs and verification"
+  ],
+  "non_goals": [
+    "Generate application code unrelated to Skills",
+    "Bypass validation or security checks",
+    "Assume external dependencies without listing them",
+    "Debug production incidents unrelated to skills"
+  ],
+  "inputs": [
+    "Skill concept and target scope",
+    "Target directory for the skill folder",
+    "Required inputs, success criteria, and verification commands"
+  ],
+  "outputs": [
+    "SKILL.md with structured guidance",
+    "Optional supporting files (scripts/, references/, assets/, tests/)",
+    "skill.spec.json with triggers and tests",
+    "Packaged .skill file"
+  ],
+  "allowed_tools": ["Read", "Grep", "Glob", "Write", "Edit", "Bash"],
+  "integration": {
+    "strategy": "code-first",
+    "notes": "Use local scripts and validation; avoid external systems unless required."
+  },
+  "triggers": [
+    "Create a new Claude Code skill for my project",
+    "How do I create a skill in Claude Code?",
+    "Make me a skill scaffold",
+    "Validate and package this skill folder",
+    "Review my skill spec and triggers",
+    "Why isn't my skill activating?",
+    "Package this skill as a .skill file",
+    "Tune triggers for this skill"
+  ],
+  "anti_triggers": [
+    "Implement a React dashboard for analytics",
+    "Investigate a 500 error in a live API",
+    "Optimize a SQL query for latency",
+    "Write a product launch email"
+  ],
+  "acceptance_tests": [
+    "Given a skill idea and 2-3 example requests, produce a scaffolded skill folder where SKILL.md frontmatter parses and includes name/description, and skill.spec.json includes triggers, anti_triggers, and acceptance_tests",
+    "Given an existing skill folder with errors, validation reports specific issues (missing fields, invalid name, or spec errors)",
+    "Given triggers and a description, trigger analysis reports overlaps or weak matches and suggests missing terms",
+    "Given a valid skill folder, packaging produces a .skill file and reports its path"
+  ]
+}

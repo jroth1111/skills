@@ -1,0 +1,29 @@
+[
+  {
+    "id": "case_1",
+    "input": "Write a commit message for my staged changes",
+    "context": "TODO: Add any context needed for this test",
+    "expected_behaviors": [
+      "Saves staged diff to workspace/",
+      "Prints a capped preview under 1KB"
+    ]
+  },
+  {
+    "id": "case_2",
+    "input": "Suggest a git commit message",
+    "context": "TODO: Add any context needed for this test",
+    "expected_behaviors": [
+      "Saves staged diff to workspace/",
+      "Prints a capped preview under 1KB"
+    ]
+  },
+  {
+    "id": "case_3",
+    "input": "Summarize my staged diff into a commit message",
+    "context": "TODO: Add any context needed for this test",
+    "expected_behaviors": [
+      "Saves staged diff to workspace/",
+      "Prints a capped preview under 1KB"
+    ]
+  }
+]

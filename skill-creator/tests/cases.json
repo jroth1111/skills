@@ -1,0 +1,74 @@
+[
+  {
+    "id": "case_1",
+    "input": "Create a new Claude Code skill for my project",
+    "context": "User wants a skill scaffold for a new workflow.",
+    "expected_behaviors": [
+      "Scaffold a skill folder with SKILL.md and skill.spec.json",
+      "Ensure SKILL.md frontmatter parses and includes name and description"
+    ]
+  },
+  {
+    "id": "case_2",
+    "input": "How do I create a skill in Claude Code?",
+    "context": "User asks for the creation workflow and required files.",
+    "expected_behaviors": [
+      "Explain the scaffold workflow and required files",
+      "Provide or generate a valid SKILL.md frontmatter example"
+    ]
+  },
+  {
+    "id": "case_3",
+    "input": "Make me a skill scaffold",
+    "context": "User wants a full scaffold with spec and examples.",
+    "expected_behaviors": [
+      "Collect 2-3 concrete example requests to shape triggers and tests",
+      "Scaffold a skill folder with SKILL.md and skill.spec.json"
+    ]
+  },
+  {
+    "id": "case_4",
+    "input": "Validate and package this skill folder",
+    "context": "User expects validation and a packaged .skill file.",
+    "expected_behaviors": [
+      "Run python scripts/validate_skill.py <skill-dir> --strict and report issues",
+      "Run python scripts/package_skill.py <skill-dir> and report the .skill output path"
+    ]
+  },
+  {
+    "id": "case_5",
+    "input": "Review my skill spec and triggers",
+    "context": "User wants feedback on trigger quality and overlaps.",
+    "expected_behaviors": [
+      "Run python scripts/analyze_triggers.py <skill-dir> and report issues",
+      "Suggest improvements to triggers and anti-triggers"
+    ]
+  },
+  {
+    "id": "case_6",
+    "input": "Why isn't my skill activating?",
+    "context": "User suspects description and trigger mismatch.",
+    "expected_behaviors": [
+      "Review description and triggers for coverage",
+      "Run python scripts/analyze_triggers.py <skill-dir> and report mismatches"
+    ]
+  },
+  {
+    "id": "case_7",
+    "input": "Package this skill as a .skill file",
+    "context": "User wants a distributable .skill artifact.",
+    "expected_behaviors": [
+      "Run python scripts/validate_skill.py <skill-dir> --strict",
+      "Run python scripts/package_skill.py <skill-dir> and report the .skill file path"
+    ]
+  },
+  {
+    "id": "case_8",
+    "input": "Tune triggers for this skill",
+    "context": "User wants to improve activation reliability.",
+    "expected_behaviors": [
+      "Review description and triggers for coverage gaps",
+      "Suggest trigger phrasing improvements or additions"
+    ]
+  }
+]

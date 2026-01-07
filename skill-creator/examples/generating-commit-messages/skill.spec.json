@@ -1,0 +1,22 @@
+{
+  "name": "generating-commit-messages",
+  "title": "Generating Commit Messages",
+  "description": "Generate concise commit messages from staged git diffs. Use when writing commits or reviewing staged changes in git.",
+  "archetype": "basic",
+  "risk_level": "low",
+  "entry_point": "scripts/main.py",
+  "triggers": [
+    "Write a commit message for my staged changes",
+    "Suggest a git commit message",
+    "Summarize my staged diff into a commit message"
+  ],
+  "anti_triggers": [
+    "Rewrite git history and force push",
+    "Write marketing copy"
+  ],
+  "acceptance_tests": [
+    "Saves staged diff to workspace/",
+    "Prints a capped preview under 1KB",
+    "Does not crash when staged diff is empty"
+  ]
+}
